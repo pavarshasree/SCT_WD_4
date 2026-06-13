@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 04 - To-Do Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app" aria-label="To-do web application">
+    <div class="shell">
+      <header class="header">
+        <div class="brand">
+          <h1>Task 04 - To-Do Web App</h1>
+          <p>Add, organize, complete, edit, and schedule tasks</p>
+        </div>
+        <div class="status" aria-live="polite">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="statusText">Ready</span>
+        </div>
+      </header>
+
+      <section class="content">
+        <section class="task-card">
+          <div class="top-row">
+            <div class="pill">SkillCraft Technology</div>
+            <button class="btn btn-ghost" id="clearCompletedBtn" type="button">Clear Completed</button>
+          </div>
+
+          <form class="form" id="taskForm">
+            <div class="grid">
+              <input id="taskInput" type="text" placeholder="Enter a task..." autocomplete="off" required />
+              <input id="dateInput" type="date" />
+              <input id="timeInput" type="time" />
+            </div>
+            <div class="grid two">
+              <select id="categoryInput">
+                <option value="General">General</option>
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+                <option value="Personal">Personal</option>
+              </select>
+              <button class="btn btn-primary" id="submitBtn" type="submit">Add Task</button>
+            </div>
+          </form>
+
+          <div class="list-head">
+            <h2>My Tasks</h2>
+            <div class="filters">
+              <button class="chip active" data-filter="all" type="button">All</button>
+              <button class="chip" data-filter="active" type="button">Active</button>
+              <button class="chip" data-filter="completed" type="button">Completed</button>
+            </div>
+          </div>
+
+          <ul class="task-list" id="taskList">
+            <li class="empty" id="emptyState">
+              <div>
+                <strong>No tasks yet</strong>
+                Add your first task using the form above.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <aside class="summary-card">
+          <h2>Overview</h2>
+          <div class="stats">
+            <div class="stat">
+              <small>Total</small>
+              <strong id="totalTasks">0</strong>
+            </div>
+            <div class="stat">
+              <small>Completed</small>
+              <strong id="completedTasks">0</strong>
+            </div>
+            <div class="stat">
+              <small>Remaining</small>
+              <strong id="remainingTasks">0</strong>
+            </div>
+            <div class="stat">
+              <small>Due Soon</small>
+              <strong id="dueSoonTasks">0</strong>
+            </div>
+          </div>
+
+          <p class="note">You can edit a task after creating it. Dates and times are optional, so the app stays easy to use.</p>
+          <p class="note">Tasks are saved in the browser using local storage, so they stay after refresh.</p>
+        </aside>
+      </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+  
+</body>
+</html>
