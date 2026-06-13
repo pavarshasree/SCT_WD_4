@@ -52,7 +52,6 @@ https://pavarshasree.github.io/SCT_WD_4/
 <img width="1082" height="645" alt="image" src="https://github.com/user-attachments/assets/4a291c8d-f94f-43fb-97d1-d5f507513ca5" />
 
 
-```
 
 ## Learning Outcomes
 
